@@ -1,0 +1,179 @@
+<html>
+<head>
+    <title>Bokun Wang's Publication List</title>
+    <style>
+  body {background-color: whitesmoke;}
+  h1 {color: black;}
+  p {color: black;}
+.togList
+{
+
+}
+
+.togList dt
+{
+cursor: pointer; cursor: hand;
+}
+
+.togList dt span
+{
+
+color: blue;
+}
+
+.togList dd
+{
+width: 680px;
+padding-bottom: 15px;
+}
+ 								
+html.isJS .togList dd
+{
+display: none;
+}
+</style>
+<script type="text/javascript">
+
+/* Only set closed if JS-enabled */
+document.getElementsByTagName('html')[0].className = 'isJS';
+
+function tog(dt)
+{
+var display, dd=dt;
+/* get dd */
+do{ dd = dd.nextSibling } while(dd.tagName!='DD');
+toOpen =!dd.style.display;
+dd.style.display = toOpen? 'block':''
+dt.getElementsByTagName('span')[0].innerhtml = toOpen? '-':'+' ;
+}
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"> 
+</head>
+<body leftmargin="9">
+<table class="imgtable" border="0" width="70%" id="AutoNumber1" style="float: left; position: absolute; left: 15%; top:26px">
+<body style="font-family:Helvetica;">
+
+    
+  <tr>
+    <td width="100%">
+	<h2><b>
+    <font face="Helvetica" color="black"><span style="font-size: 14.0pt">Publications</span></font></b></h2>
+        
+        <ul>
+            <li>
+        <b> Finite-Sum Coupled Compositional Stochastic Optimization: Theory and Applications <a href="https://arxiv.org/abs/2202.12396">[arxiv]</a> </b><br>
+        Bokun Wang and Tianbao Yang<br> 
+        In Proc. of the 39th International Conference on Machine Learning (ICML), 2022. <br>
+				<dl class="togList">
+          <dt onclick="tog(this)">
+            <span>+</span> <font color="blue">abstract</font>
+          </dt>
+          <dd>  
+	   <font face = "Verdana" size = "2" color = #5D6D7E> This paper studies stochastic optimization for a sum of compositional functions, where the inner-level function of each summand is coupled with the corresponding summation index. We refer to this family of problems as finite-sum coupled compositional optimization (FCCO). It has broad applications in machine learning for optimizing non-convex or convex compositional measures/objectives such as average precision (AP), p-norm push, listwise ranking losses, neighborhood component analysis (NCA), deep survival analysis, deep latent variable models, etc., which deserves finer analysis. Yet, existing algorithms and analyses are restricted in one or other aspects. The contribution of this paper is to provide a comprehensive convergence analysis of a simple stochastic algorithm for both non-convex and convex objectives. Our key result is the improved oracle complexity with the parallel speed-up by using the moving-average based estimator with mini-batching. Our theoretical analysis also exhibits new insights for improving the practical implementation by sampling the batches of equal size for the outer and inner levels. Numerical experiments on AP maximization, NCA, and p-norm push corroborate some aspects of the theory.</font>           </dd> 
+        </dl></li>
+        </ul>
+        
+        <ul>
+        <li>
+        <b> LibAUC: A Deep Learning Library for X-risk Optimization <a href="https://libauc.org/">[link]</a> </b><br>
+        Zhuoning Yuan, Zi-Hao Qiu, Gang Li, Dixian Zhu, Zhishuai Guo, Quanqi Hu, Bokun Wang, Qi Qi, Yongjian Zhong, and Tianbao Yang<br> 
+        </li>
+        </ul>
+        
+        <ul>
+            <li>
+        <b> When AUC meets DRO: Optimizing Partial AUC for Deep Learning with Non-Convex Convergence Guarantee <a href="https://arxiv.org/abs/2203.00176">[arxiv]</a> </b><br>
+        Dixian Zhu, Gang Li, Bokun Wang, Xiaodong Wu, and Tianbao Yang<br> 
+        In Proc. of the 39th International Conference on Machine Learning (ICML), 2022. <br>
+				<dl class="togList">
+          <dt onclick="tog(this)">
+            <span>+</span> <font color="blue">abstract</font>
+          </dt>
+          <dd>  
+	   <font face = "Verdana" size = "2" color = #5D6D7E>In this paper, we propose systematic and efficient gradient-based methods for both one-way and two-way partial AUC (pAUC) maximization that are applicable to deep learning. We propose new formulations of pAUC surrogate objectives by using the distributionally robust optimization (DRO) to define the loss for each individual positive data. We consider two formulations of DRO, one of which is based on conditional-value-at-risk (CVaR) that yields a non-smooth but exact estimator for pAUC, and another one is based on a KL divergence regularized DRO that yields an inexact but smooth (soft) estimator for pAUC. For both one-way and two-way pAUC maximization, we propose two algorithms and prove their convergence for optimizing their two formulations, respectively. Experiments demonstrate the effectiveness of the proposed algorithms for pAUC maximization for deep learning on various datasets.</font>          </dd> 
+        </dl></li>
+        </ul>
+        
+        <ul>
+            <li>
+        <b> Optimal Algorithms for Stochastic Multi-Level Compositional Optimization <a href="https://arxiv.org/abs/2202.07530">[arxiv]</a> </b><br>
+        Wei Jiang, Bokun Wang, Yibo Wang, Lijun Zhang, and Tianbao Yang<br> 
+        In Proc. of the 39th International Conference on Machine Learning (ICML), 2022. <br>
+				<dl class="togList">
+          <dt onclick="tog(this)">
+            <span>+</span> <font color="blue">abstract</font>
+          </dt>
+          <dd>  
+	   <font face = "Verdana" size = "2" color = #5D6D7E>In this paper, we investigate the problem of stochastic multi-level compositional optimization, where the objective function is a composition of multiple smooth but possibly non-convex functions. Existing methods for solving this problem either suffer from sub-optimal sample complexities or need a huge batch size. To address this limitation, we propose a Stochastic Multi-level Variance Reduction method (SMVR), which achieves the optimal sample complexity of O(1/ϵ^3) to find an ϵ-stationary point for non-convex objectives. Furthermore, when the objective function satisfies the convexity or Polyak-Łojasiewicz (PL) condition, we propose a stage-wise variant of SMVR and improve the sample complexity to O(1/ϵ^2) for convex functions or O(1/(μϵ)) for non-convex functions satisfying the μ-PL condition. The latter result implies the same complexity for μ-strongly convex functions. To make use of adaptive learning rates, we also develop Adaptive SMVR, which achieves the same optimal complexities but converges faster in practice. All our complexities match the lower bounds not only in terms of ϵ but also in terms of μ (for PL or strongly convex functions), without using a large batch size in each iteration.</font>          </dd> 
+        </dl></li>
+        </ul>
+        
+        <ul>
+            <li>
+        <b> GraphFM: Improving Large-Scale GNN Training via Feature Momentum </b><br>
+        Haiyang Yu*, Limei Wang*, Bokun Wang*, Meng Liu, Tianbao Yang, and Shuiwang Ji (*Equal Contribution)<br> 
+        In Proc. of the 39th International Conference on Machine Learning (ICML), 2022. <br>
+		</li>
+        </ul>
+        
+        <ul>
+            <li>
+        <b> Riemannian Stochastic Proximal Gradient Methods for Nonsmooth Optimization over the Stiefel Manifold <a href="https://www.jmlr.org/papers/volume23/21-0314/21-0314.pdf">[journal]</a> <a href="https://arxiv.org/abs/2005.01209">[arxiv]</a> <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:XJC0PmY54pIJ:scholar.google.com/&output=citation&scisdr=CgXELv9IEImP2iM4nYU:AAGBfm0AAAAAYq0-hYXr3tmnRHqfVh0ZNlzDL0idXBYY&scisig=AAGBfm0AAAAAYq0-hbcx-hzdC6sCnW6r2Y76YIiGzWfV&scisf=4&ct=citation&cd=-1&hl=en&scfhb=1">[bib]</a></b><br>
+        Bokun Wang, Shiqian Ma, and Lingzhou Xue<br> 
+        In Journal of Machine Learning Research (JMLR), 23(106), 1-33, 2022. <br>
+				<dl class="togList">
+          <dt onclick="tog(this)">
+            <span>+</span> <font color="blue">abstract</font>
+          </dt>
+          <dd>  
+	   <font face = "Verdana" size = "2" color = #5D6D7E>Riemannian optimization has drawn a lot of attention due to its wide applications in practice. Riemannian stochastic first-order algorithms have been studied in the literature to solve large-scale machine learning problems over Riemannian manifolds. However, most of the existing Riemannian stochastic algorithms require the objective function to be differentiable, and they do not apply to the case where the objective function is nonsmooth. In this paper, we present two Riemannian stochastic proximal gradient methods for minimizing nonsmooth function over the Stiefel manifold. The two methods, named R-ProxSGD and R-ProxSPB, are generalizations of proximal SGD and proximal SpiderBoost in Euclidean setting to the Riemannian setting. Analysis on the incremental first-order oracle (IFO) complexity of the proposed algorithms is provided. Specifically, the R-ProxSPB algorithm finds an ϵ-stationary point with O(ϵ^{−3}) IFOs in the online case, and O(n+\sqrt{n}ϵ^{−2}) IFOs in the finite-sum case with n being the number of summands in the objective. Experimental results on online sparse PCA and robust low-rank matrix completion show that our proposed methods significantly outperform the existing methods that use Riemannian subgradient information.</font>          </dd> 
+        </dl></li>
+        </ul>
+         
+        <ul>
+            <li>
+        <b> IntSGD: Adaptive Floatless Compression of Stochastic Gradients <a href="https://openreview.net/forum?id=pFyXqxChZc">[openreview]</a> <a href="https://arxiv.org/abs/2102.08374">[arxiv]</a> <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:-IK4WW0ofusJ:scholar.google.com/&output=citation&scisdr=CgXELv9IEImP2iNHSwM:AAGBfm0AAAAAYq1BUwMtAFU6YdUYbxoEQPr1zDEuhjjB&scisig=AAGBfm0AAAAAYq1BU_qBdqeJeynHaHDhEvNcrQ8Cn9oJ&scisf=4&ct=citation&cd=-1&hl=en&scfhb=1">[bib]</a> <a href="https://github.com/bokunwang1/intsgd">[code]</a> <a href="https://www.konstmish.com/uploads/posters/22-intsgd.pdf">[poster]</a> <a href="https://www.konstmish.com/uploads/slides/22-intsgd.pdf">[slides]</a></b><br>
+        Konstantin Mishchenko, Bokun Wang, Dmitry Kovalev, and Peter Richtárik<br> 
+        In International Conference on Learning Representations (ICLR), 2022 <font color="red">(Spotlight)</font>. <br>
+				<dl class="togList">
+          <dt onclick="tog(this)">
+            <span>+</span> <font color="blue">abstract</font>
+          </dt>
+          <dd>  
+	   <font face = "Verdana" size = "2" color = #5D6D7E>We propose a family of adaptive integer compression operators for distributed Stochastic Gradient Descent (SGD) that do not communicate a single float. This is achieved by multiplying floating-point vectors with a number known to every device and then rounding to integers. In contrast to the prior work on integer compression for SwitchML by Sapio et al. (2021), our IntSGD method is provably convergent and computationally cheaper as it estimates the scaling of vectors adaptively. Our theory shows that the iteration complexity of IntSGD matches that of SGD up to constant factors for both convex and non-convex, smooth and non-smooth functions, with and without overparameterization. Moreover, our algorithm can also be tailored for the popular all-reduce primitive and shows promising empirical performance.</font>          </dd> 
+        </dl></li>
+        </ul>
+        
+        <ul>
+        <li>
+        <b> Smoothness-Aware Quantization Techniquess <a href="https://fl-icml.github.io/2021/papers/FL-ICML21_paper_27.pdf">[workshop]</a> <a href="https://arxiv.org/abs/2106.03524">[arxiv]</a> </b><br>
+        Bokun Wang, Mher Safaryan, and Peter Richtárik<br> 
+        In ICML Workshop on Federated Learning for User Privacy and Data Confidentiality (FL-ICML), 2021. <br>
+				<dl class="togList">
+          <dt onclick="tog(this)">
+            <span>+</span> <font color="blue">abstract</font>
+          </dt>
+          <dd>  
+	   <font face = "Verdana" size = "2" color = #5D6D7E>Distributed machine learning has become an indispensable tool for training large supervised machine learning models. To address the high communication costs of distributed training, which is further exacerbated by the fact that modern highly performing models are typically overparameterized, a large body of work has been devoted in recent years to the design of various compression strategies, such as sparsification and quantization, and optimization algorithms capable of using them. Recently, Safaryan et al (2021) pioneered a dramatically different compression design approach: they first use the local training data to form local smoothness matrices, and then propose to design a compressor capable of exploiting the smoothness information contained therein. While this novel approach leads to substantial savings in communication, it is limited to sparsification as it crucially depends on the linearity of the compression operator. In this work, we resolve this problem by extending their smoothness-aware compression strategy to arbitrary unbiased compression operators, which also includes sparsification. Specializing our results to quantization, we observe significant savings in communication complexity compared to standard quantization. In particular, we show theoretically that block quantization with n blocks outperforms single block quantization, leading to a reduction in communication complexity by an O(n) factor, where n is the number of nodes in the distributed system. Finally, we provide extensive numerical evidence that our smoothness-aware quantization strategies outperform existing quantization schemes as well the aforementioned smoothness-aware sparsification strategies with respect to all relevant success measures: the number of iterations, the total amount of bits communicated, and wall-clock time.</font>          </dd> 
+        </dl></li>
+        </ul>        
+        
+        <ul>
+        <li>
+        <b> Towards Fair Deep Clustering With Multi-State Protected Variables <a href="https://arxiv.org/abs/1901.10053">[arxiv]</a> </b><br>
+        Bokun Wang and Ian Davidson<br> 
+        In ICML Workshop on the Security and Privacy of Machine Learning (SPML), 2019. <br>
+				<dl class="togList">
+          <dt onclick="tog(this)">
+            <span>+</span> <font color="blue">abstract</font>
+          </dt>
+          <dd>  
+	   <font face = "Verdana" size = "2" color = #5D6D7E>Fair clustering under the disparate impact doctrine requires that population of each protected group should be approximately equal in every cluster. Previous work investigated a difficult-to-scale pre-processing step for k-center and k-median style algorithms for the special case of this problem when the number of protected groups is two. In this work, we consider a more general and practical setting where there can be many protected groups. To this end, we propose Deep Fair Clustering, which learns a discriminative but fair cluster assignment function. The experimental results on three public datasets with different types of protected attribute show that our approach can steadily improve the degree of fairness while only having minor loss in terms of clustering quality.</font>          </dd> 
+        </dl></li>
+        </ul> <br>
+</tr>
+</body>
+</html>
